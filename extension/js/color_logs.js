@@ -23,12 +23,17 @@
   for (var i = 0; i < logLines.length; ++i) {
     // Get the class to use depending on the first word
     logLine = logLines[i];
-    firstWord = logLine.split('\t')[0];
+    if( logLine.indexOf('Error') >= 0 || logLine.indexOf('error') >= 0 || logLine.indexOf('Failed') >= 0 || logLine.indexOf('failed') >= 0){
+		logLineType = 'error'
+    }
+    else {
+      firstWord = logLine.split('\t')[0];
 
-    if (logLineTypes.indexOf(firstWord) >= 0){
-      logLineType = firstWord;
-    } else {
-      logLineType = 'default';
+      if (logLineTypes.indexOf(firstWord) >= 0){
+        logLineType = firstWord;
+      } else {
+        logLineType = 'default';
+      }
     }
 
     if(logLineType != currentLogLineType){
