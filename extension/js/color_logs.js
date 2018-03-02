@@ -23,7 +23,7 @@
   for (var i = 0; i < logLines.length; ++i) {
     // Get the class to use depending on the first word
     logLine = logLines[i];
-    if( logLine.indexOf('Error') >= 0 || logLine.indexOf('error') >= 0 || logLine.indexOf('Failed') >= 0 || logLine.indexOf('failed') >= 0){
+    if( logLine.indexOf('Error') >= 0 || logLine.indexOf('error') >= 0 || logLine.indexOf('ERROR') >= 0 || logLine.indexOf('Failed') >= 0 || logLine.indexOf('failed') >= 0){
 		logLineType = 'error'
     }
     else {
