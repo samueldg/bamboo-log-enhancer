@@ -3,7 +3,7 @@
   "name": "Bamboo Log Enhancer",
   "description": "Color Atlassian Bamboo log files",
   "homepage_url": "https://github.com/samueldg/bamboo-log-enhancer",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "icons": {
     "16": "icons/16.png",
     "32": "icons/32.png",
@@ -20,7 +20,7 @@
         "js/color_logs.js"
       ],
       "css": [
-        "css/log_lines.css"
+        "css/bamboo_log.css"
       ],
       "run_at": "document_idle"
     }
