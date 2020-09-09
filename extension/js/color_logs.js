@@ -40,7 +40,7 @@
     }
 
     // Append the line in the current block's text
-    currentLogBlock.innerText = currentLogBlock.innerText + '\n' + logLine
+    currentLogBlock.innerHTML = currentLogBlock.innerHTML + logLine + '<br/>';
   }
 
   body.appendChild(logDiv);
