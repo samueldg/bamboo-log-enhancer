@@ -1,9 +1,9 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Bamboo Log Enhancer",
   "description": "Color Atlassian Bamboo log files",
   "homepage_url": "https://github.com/samueldg/bamboo-log-enhancer",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "icons": {
     "16": "icons/16.png",
     "32": "icons/32.png",
@@ -25,10 +25,12 @@
       "run_at": "document_idle"
     }
   ],
-  "permissions": [
-    "*://*/*.log"
-  ],
-  "optional_permissions": [
-    "file:///*.log"
-  ]
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{8fc18dc8-436a-4825-9ce3-d6a1959d221e}",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  }
 }
