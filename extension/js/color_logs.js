@@ -39,8 +39,13 @@
       currentLogLineType = logLineType;
     }
 
-    // Append the line in the current block's text
-    currentLogBlock.innerText = currentLogBlock.innerText + '\n' + logLine
+    // Append the line in the current block's text.
+    // The blocks are only attached to the document once every line has been
+    // read, so `textContent` is the only accurate accessor here: reading back
+    // `innerText` from an unrendered element skips the <br> elements its
+    // setter produces, which drops the line breaks written so far. The line
+    // breaks are literal, and `.log` renders them through `white-space`.
+    currentLogBlock.textContent = currentLogBlock.textContent + '\n' + logLine
   }
 
   body.appendChild(logDiv);
